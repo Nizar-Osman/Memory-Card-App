@@ -1,12 +1,14 @@
-function Card(props) {
-    return (
-        <div className="card">
-            <h2>Name</h2>
-            <img src="https://via.placeholder.com/100" alt="Meaning" />
-            <p>Meaning</p>
+import React from 'react';
 
+
+function Card(props) {
+  return (
+      
+        <div className="card">
+          <h2>{props.name}</h2>
+          <p>{props.meaning}</p>
         </div>
-    );
-} 
+  );
+};
 
 export default Card;
