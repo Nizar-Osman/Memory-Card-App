@@ -1,9 +1,13 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import Card from './Card';
 
 
 
 function App() {
+  
+  
+  
+  
   return (
     <div className="App">
       <h1>Flashcards</h1>
@@ -12,6 +16,9 @@ function App() {
       <Card name="Card 3" meaning="Meaning 3" />
     </div>
   );
+
+
+
 }
 
 export default App;
