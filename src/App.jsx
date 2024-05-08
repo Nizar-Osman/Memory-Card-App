@@ -1,25 +1,47 @@
-import React,{useState, useEffect} from 'react';
-import Card from './Card';
-
-
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import FlashCard from "./FlashCard";
 
 function App() {
-  
-  
-  
-  
+  const [data, setData] = useState([]);
+
+  const options = {
+    method: "GET",
+    url: "https://allah-name.p.rapidapi.com/name",
+    headers: {
+      "X-RapidAPI-Key": "edd84a6967msh0a4e80dadf0bdf0p18d4e4jsn3fd01c9c4057",
+      "X-RapidAPI-Host": "allah-name.p.rapidapi.com",
+    },
+  };
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.request(options);
+      console.log(response.data.main);
+      setData(response.data.main);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <h1>Flashcards</h1>
-      <Card name="Card 1" meaning="Meaning 1" />
-      <Card name="Card 2" meaning="Meaning 2" />
-      <Card name="Card 3" meaning="Meaning 3" />
+    <div>
+      {data.map((item, index) => (
+        <FlashCard
+          key={index}
+          arName={item.arName}
+          enName={item.enName}
+          meaning={item.meaning}
+          explanation={item.explanation}
+        />
+      ))}
     </div>
   );
-
-
-
 }
 
 export default App;
-
