@@ -44,19 +44,32 @@ function App() {
     }
   };
   return (
-    <div>
-      {data
-        .slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage)
-        .map((item, index) => (
-          <FlashCard
-            key={index}
-            arName={item.arName}
-            enName={item.enName}
-            meaning={item.meaning}
-            explanation={item.explanation}
-          />
-        ))}
-    </div>
+    <>
+      <div>
+        {data
+          .slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage)
+          .map((item, index) => (
+            <FlashCard
+              key={index}
+              arName={item.arName}
+              enName={item.enName}
+              meaning={item.meaning}
+              explanation={item.explanation}
+            />
+          ))}
+      </div>
+      <div>
+        <button onClick={prevPageHandler} disabled={currentPage === 0}>
+          Previous
+        </button>
+        <button
+          onClick={nextPageHandler}
+          disabled={currentPage === Math.ceil(data.length / cardsPerPage) - 1}
+        >
+          Next
+        </button>
+      </div>
+    </>
   );
 }
 
