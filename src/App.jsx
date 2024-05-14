@@ -5,6 +5,8 @@ import FlashCard from "./FlashCard";
 
 function App() {
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const cardsPerPage = 6;
 
   const options = {
     method: "GET",
@@ -28,6 +30,13 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  const nextPageHandler = () => {
+    const nextPageIndex = currentPage + 1;
+    if (nextPageIndex < Math.ceil(data.length / cardsPerPage)) {
+      setCurrentPage(nextPageIndex);
+    }
+  };
 
   return (
     <div>
