@@ -45,15 +45,17 @@ function App() {
   };
   return (
     <div>
-      {data.map((item, index) => (
-        <FlashCard
-          key={index}
-          arName={item.arName}
-          enName={item.enName}
-          meaning={item.meaning}
-          explanation={item.explanation}
-        />
-      ))}
+      {data
+        .slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage)
+        .map((item, index) => (
+          <FlashCard
+            key={index}
+            arName={item.arName}
+            enName={item.enName}
+            meaning={item.meaning}
+            explanation={item.explanation}
+          />
+        ))}
     </div>
   );
 }
