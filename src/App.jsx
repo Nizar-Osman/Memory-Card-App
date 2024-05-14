@@ -37,7 +37,12 @@ function App() {
       setCurrentPage(nextPageIndex);
     }
   };
-
+  const prevPageHandler = () => {
+    const prevPageIndex = currentPage - 1;
+    if (prevPageIndex >= 0) {
+      setCurrentPage(prevPageIndex);
+    }
+  };
   return (
     <div>
       {data.map((item, index) => (
