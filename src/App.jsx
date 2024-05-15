@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FlashCard from "./FlashCard";
+import "./index.css";
 
 function App() {
   const [data, setData] = useState([]);
@@ -45,7 +46,7 @@ function App() {
   };
   return (
     <>
-      <div>
+      <div className="card">
         {data
           .slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage)
           .map((item, index) => (
