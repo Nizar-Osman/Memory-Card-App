@@ -1,5 +1,61 @@
-.card {
+.card-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.card {
+    background-color: black;
+    border-radius: 10px;
+    height: fit-content;
+    width: 200px;
+}
+
+.card-arName {
+    color: #d4af37;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card-enName {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1rem;
+
+}
+
+.card-meaning {
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.card-explanation {
+    text-align: center;
+    color: white;
+    padding-top: 10%;
+    font-size: 1rem;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+}
+
+.prev-button {
+    background-color: #d4af37;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+.next-button {
+    background-color: #d4af37;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+
+    
 }

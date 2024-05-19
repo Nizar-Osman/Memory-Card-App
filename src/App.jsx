@@ -46,7 +46,7 @@ function App() {
   };
   return (
     <>
-      <div className="card">
+      <div className="card-container">
         {data
           .slice(currentPage * cardsPerPage, (currentPage + 1) * cardsPerPage)
           .map((item, index) => (
@@ -60,10 +60,15 @@ function App() {
           ))}
       </div>
       <div>
-        <button onClick={prevPageHandler} disabled={currentPage === 0}>
+        <button
+          className="prev-button"
+          onClick={prevPageHandler}
+          disabled={currentPage === 0}
+        >
           Previous
         </button>
         <button
+          className="next-button"
           onClick={nextPageHandler}
           disabled={currentPage === Math.ceil(data.length / cardsPerPage) - 1}
         >

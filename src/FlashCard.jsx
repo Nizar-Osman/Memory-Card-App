@@ -4,12 +4,11 @@ import Card from "react-bootstrap/Card";
 function FlashCard(props) {
   return (
     <Card style={{ width: "14rem" }}>
-      <Card.Body>
-        <Card.Title>{props.arName}</Card.Title>
-        <Card.Text> {props.enName} </Card.Text>
-        <Card.Text> {props.meaning} </Card.Text>
-        <Card.Text> {props.explanation} </Card.Text>
-        <Button variant="primary">Flip</Button>
+      <Card.Body className="card">
+        <Card.Title className="card-arName">{props.arName}</Card.Title>
+        <Card.Text className="card-enName"> {props.enName} </Card.Text>
+        <Card.Text className="card-meaning"> {props.meaning} </Card.Text>
+        <Card.Text className="card-explanation">{props.explanation} </Card.Text>
       </Card.Body>
     </Card>
   );
