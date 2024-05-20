@@ -9,6 +9,8 @@ function App() {
   const [currentPage, setCurrentPage] = useState(0);
   const cardsPerPage = 6;
 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const options = {
     method: "GET",
     url: "https://allah-name.p.rapidapi.com/name",
@@ -44,6 +46,7 @@ function App() {
       setCurrentPage(prevPageIndex);
     }
   };
+
   return (
     <>
       <div className="card-container">
@@ -59,7 +62,7 @@ function App() {
             />
           ))}
       </div>
-      <div>
+      <div className="button-container">
         <button
           className="prev-button"
           onClick={prevPageHandler}
