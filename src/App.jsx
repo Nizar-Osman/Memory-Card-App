@@ -61,6 +61,7 @@ function App() {
               explanation={item.explanation}
             />
           ))}
+        <p className="reward-paragraph">Reward</p>
       </div>
       <div className="button-container">
         <button

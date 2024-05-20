@@ -20,7 +20,9 @@ function FlashCard(props) {
         <Card.Text className="card-explanation">
           {isFlipped && props.explanation}
         </Card.Text>
-        <Button onClick={flipHandler} variant="primary"></Button>
+        <Button onClick={flipHandler} className="flip-button">
+          {isFlipped ? "Flip Back" : "Flip"}
+        </Button>
       </Card.Body>
     </Card>
   );

@@ -10,8 +10,7 @@
 .card {
     background-color: black;
     border-radius: 10px;
-    height: 70vh;
-    width: 200px;
+    height: fit-content;
 }
 
 .card-arName {
@@ -70,6 +69,31 @@
     color: black;
     padding: 10px;
     margin: 10px;
+}
 
-    
+.flip-button {
+    background-color: green;
+    border: green;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: bold;
+    font-size: .8rem;
+   
+}
+
+.flip-button:hover {
+    background-color: #d4af37;
+    color: black;
+
+}
+
+.reward-paragraph {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
