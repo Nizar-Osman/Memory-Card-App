@@ -1,10 +1,11 @@
 
 .card-container {
     background-color: rgb(19, 19, 19);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 80vh;
+    display: grid;
+    grid-template-rows: auto auto;;
+    gap: 1rem;
+    justify-items: space-between;
+    
 }
 
 .card {
@@ -72,8 +73,8 @@
 }
 
 .flip-button {
-    background-color: green;
-    border: green;
+    background-color: #d4af37;
+    border: black;
     align-items: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: bold;
@@ -82,18 +83,15 @@
 }
 
 .flip-button:hover {
-    background-color: #d4af37;
-    color: black;
+    background-color: green;
+    color: white;
 
 }
 
-.reward-paragraph {
+.quote {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-    font-style: italic;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }

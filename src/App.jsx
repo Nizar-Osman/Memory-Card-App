@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FlashCard from "./FlashCard";
 import "./index.css";
+import Quote from "./Quote";
 
 function App() {
   const [data, setData] = useState([]);
@@ -61,7 +62,7 @@ function App() {
               explanation={item.explanation}
             />
           ))}
-        <p className="reward-paragraph">Reward</p>
+        <Quote />
       </div>
       <div className="button-container">
         <button
